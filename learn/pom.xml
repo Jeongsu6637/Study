@@ -1,0 +1,118 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.example</groupId>
+  <artifactId>learn</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>learn Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+<!--    새 프로젝트 생성시 기본적으로 생기는 Maven 코드 -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+
+<!--    Spring 코드를 읽을수있게 해주는코드? -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>5.3.20</version>
+    </dependency>
+
+<!--    Spring Wep mvc (Model View Controller) -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>5.3.20</version>
+    </dependency>
+
+<!--    dbcp : Dependency-based Connect Pool
+        데이터베이스 연결을 효율적으로 해준다. 데이터베이스 연결은 시간과 리소스가 많이 드는 작업이다.
+        그래서 매번 연결을 생성하고 해제하는것은 비효율적이다. 하지만 연결 풀은 미리 일정한 수의 연결을
+        생성해서 관리하고 필요할 때마다 연결을 대여하고 반환하는 방식으로 작동 -->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-dbcp2</artifactId>
+      <version>2.9.0</version>
+    </dependency>
+
+<!--    Spring에서 mybatis를 사용하겠다  -->
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis-spring</artifactId>
+      <version>2.0.7</version>
+    </dependency>
+
+<!--    mybatis 등록? -->
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis</artifactId>
+      <version>3.5.11</version>
+    </dependency>
+
+<!--    Java Database Connectivity 자바와 데이터베이스를 연결해준다. -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>5.3.20</version>
+    </dependency>
+
+<!--    Java와 Mysql을 연결해준다. -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.33</version>
+    </dependency>
+
+<!--    jsp를 사용하겠다. -->
+    <dependency>
+      <groupId>javax.servlet.jsp</groupId>
+      <artifactId>jsp-api</artifactId>
+      <version>2.1</version>
+      <scope>provided</scope>
+    </dependency>
+
+<!--    servlet을 사용하겠다. -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.1.0</version>
+      <scope>provided</scope>
+    </dependency>
+
+<!--    jsp tag library
+        jsp 안에서 반복문이나 조건문을 사용할수있게 해준다. -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>
+    </dependency>
+
+<!--    객체 풀링을 구현하기 위한 라이브러리
+        객체 풀링은 리소스를 효율적으로 관리하기 위해 객체를 미리 생성하고
+        풀에 보관한 후 필요할때마다 대여하고 반환하는 방식.-->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-pool2</artifactId>
+      <version>2.8.1</version>
+    </dependency>
+
+  </dependencies>
+  <build>
+    <finalName>learn</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>7</source>
+          <target>7</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
