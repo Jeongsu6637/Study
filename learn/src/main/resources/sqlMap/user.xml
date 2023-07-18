@@ -2,11 +2,38 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mapper 의 경로 설정 하는것. -->
+<mapper namespace="com.learn.mapper.UserMapper">
 
-<mapper namespace="com.susan.domain.dao.StoreMapper">
+    <insert id="signUp" parameterType="signupRequest">
+        insert into User(id, password, name, birth_date, phone, address, email)
+        values(#{id}, #{password}, #{name}, #{birth_date}, #{phone}, #{address}, #{email});
+    </insert>
 
-    <select id="findAllStore" resultType="com.susan.domain.entity.Store">
-        select * from store;
+    <select id="login" resultType="User">
+        select * from User where id = #{id} AND password = #{password};
     </select>
+
+<!--    잔액 업데이트 쿼리-->
+<!--    Todo : type이랑 seq만 가져오면 된다.-->
+<!--    <update id="depositUpdate" parameterType="depositUpdateRequest">-->
+<!--        UPDATE User-->
+<!--        <set>-->
+<!--            <if test="type == 0">-->
+<!--                deposit = deposit + 1000-->
+<!--            </if>-->
+<!--            <if test="type != 0">-->
+<!--                deposit = deposit - 1000-->
+<!--            </if>-->
+<!--        </set>-->
+<!--        WHERE seq = #{seq}-->
+<!--    </update>-->
+
+<!--&lt;!&ndash;    잔액을 update 한 후 확인&ndash;&gt;-->
+<!--    <select id="selectDeposit" resultType="int">-->
+
+
+<!--    </select>-->
+
 
 </mapper>

@@ -11,7 +11,10 @@
         http://mybatis.org/schema/mybatis-spring
         http://mybatis.org/schema/mybatis-spring.xsd">
 
-<!--    <annotation-driven />-->
+    <annotation-driven />
+
+<!--     "com.learn" 패키지와 그 하위 패키지에서 컴포넌트를 스캔하고, Spring의 구성에 자동으로 등록하는 역할 -->
+<context:component-scan base-package="com.learn"></context:component-scan>
 
 
 <!--    "com.learn.mapper" 패키지 내에 있는 매퍼 인터페이스들을 스캔하고, MyBatis의 구성에 자동으로 등록하는 역할을 합니다.
@@ -29,7 +32,6 @@
 <!--     "/resources/"로 시작하는 모든 요청을 "/resources/" 디렉토리에 위치한 정적 리소스 파일로 매핑하도록 설정하는 것 -->
     <resources mapping="/resources/**" location="/resources/" />
 
-<!--     "com.learn" 패키지와 그 하위 패키지에서 컴포넌트를 스캔하고, Spring의 구성에 자동으로 등록하는 역할 -->
-    <context:component-scan base-package="com.learn"></context:component-scan>
+
 
 </beans:beans>

@@ -1,0 +1,29 @@
+SET sql_safe_updates=0;
+create database learn;
+use learn;
+create table User(
+seq int primary key auto_increment,
+id varchar(255) Not Null,
+password varchar(255) Not Null,
+name varchar(255) Not Null,
+birth_date varchar(255) Not Null,
+phone varchar(255) Not Null,
+address varchar(255) Not Null,
+email varchar(255) Not Null,
+deposit int Null
+);
+update User
+set deposit = deposit + "2000"
+where id = "aaa112";
+select * from User;
+insert into User(id, password, name, birth_date, phone, address, email, deposit)
+values("aaa111", "aaa", "name1", "2020-01-03", "010-0000-0001", "스울", "email@adw.com", 1000);
+insert into User(id, password, name, birth_date, phone, address, email, deposit)
+values("bbb111", "bbb", "name2", "2020-02-03", "010-0000-0002", "스울", "email@adw.com", 1000);
+insert into User(id, password, name, birth_date, phone, address, email, deposit)
+values("ccc111", "ccc", "name3", "2020-03-03", "010-0000-0003", "스울", "email@adw.com", 1000);
+insert into User(id, password, name, birth_date, phone, address, email, deposit)
+values("ddd111", "ddd", "name4", "2020-04-03", "010-0000-0004", "스울", "email@adw.com", 1000);
+insert into User(id, password, name, birth_date, phone, address, email, deposit)
+values("eee111", "eee", "name5", "2020-05-03", "010-0000-0005", "스울", "email@adw.com", 1000);
+drop table User;

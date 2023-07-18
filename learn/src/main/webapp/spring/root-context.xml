@@ -8,9 +8,9 @@
         각각 설정된 값을 주입하는 역할을 한다. dbcp2를 사용하는거같음.-->
     <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
         <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/susan?serverTimezone=Asia/Seoul&amp;characterEncoding=UTF-8"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/learn?serverTimezone=Asia/Seoul&amp;characterEncoding=UTF-8"/>
         <property name="username" value="root"/>
-        <property name="password" value="1q2w3e4r"/>
+        <property name="password" value="1q2w3e4r!!"/>
     </bean>
 
 <!--    sessionFactoryBean이라는 bean에 SqlSessionFactoryBean라는 객체를 생성하고 dataSource, mapperLocations, configLocation
