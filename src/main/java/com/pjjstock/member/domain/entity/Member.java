@@ -7,7 +7,6 @@ import com.pjjstock.stock.domain.entity.InterestedStock;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.validator.constraints.Length;
-
 import java.util.ArrayList;
 import java.util.List;
 
