@@ -1,4 +1,4 @@
-package com.stock.market;
+package com.pjjstock.market;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

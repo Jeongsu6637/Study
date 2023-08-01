@@ -1,4 +1,4 @@
-package com.stock.market;
+package com.pjjstock;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
