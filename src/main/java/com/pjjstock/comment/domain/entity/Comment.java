@@ -12,8 +12,7 @@ import java.util.List;
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-@Builder
-@Getter
+@Builder @Getter
 @Table(name = "comments")
 public class Comment extends BaseEntity {
 

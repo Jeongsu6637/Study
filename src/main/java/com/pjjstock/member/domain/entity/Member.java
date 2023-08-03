@@ -45,4 +45,6 @@ public class Member extends BaseEntity {
     @OneToMany(mappedBy = "member", fetch = FetchType.LAZY, orphanRemoval = true, cascade = CascadeType.REMOVE)
     @Builder.Default
     private List<InterestedStock> interestedStocks = new ArrayList<>();
+
+
 }
